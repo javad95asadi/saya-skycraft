@@ -73,7 +73,7 @@ exports.login = async (req, res, next) => {
       httpOnly: true,
       secure: true,
       sameSite: "strict",
-      maxAge: 31536000000, // 1 year
+      maxAge: 31536000000,
     });
 
     res.status(200).json({ userId: user._id.toString() });
@@ -90,8 +90,6 @@ exports.logout = async (req, res) => {
   if (token) {
     try {
       const decodedToken = jwt.verify(token, "mohammadjavadasadi");
-      // Invalidate the token by adding it to a blacklist or revoking it
-      // For example, you can store the token in a database or a cache
       await invalidateToken(decodedToken);
     } catch (err) {
       console.error(err);
