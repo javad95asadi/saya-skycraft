@@ -38,7 +38,9 @@ preventing common vulnerabilities like SQL injection and XSS attacks.
 • Implement authentication and authorization using JWT (JSON Web 
 Tokens).
 • Add pagination, sorting, and filtering options for retrieving resources.
+
 ############################################ how to start ############################################
+
 Install Dependencies
 Navigate to the back-end directory and run:
 
